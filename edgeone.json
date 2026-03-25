@@ -1,0 +1,21 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "Homepage application configured for Tencent Cloud EdgeOne Pages",
+  "build": {
+    "command": "pnpm install && pnpm run build:edgeone",
+    "outputDirectory": "out",
+    "nodeVersion": "22"
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "headers": {
+        "Cache-Control": "public, max-age=3600, s-maxage=3600"
+      }
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}

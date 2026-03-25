@@ -130,6 +130,20 @@ Finally, run the server in production mode:
 pnpm start
 ```
 
+## On Tencent Cloud EdgeOne Pages
+
+Homepage can be deployed as a static site on Tencent Cloud EdgeOne Pages, though with limited functionality (no API routes, Docker monitoring, or real-time updates).
+
+```bash
+# Build for EdgeOne Pages
+pnpm install
+pnpm run build:edgeone
+```
+
+The static files will be in the `out` directory. See [EDGEONE_DEPLOYMENT.md](EDGEONE_DEPLOYMENT.md) for detailed instructions and limitations.
+
+For full functionality, use the standard Docker deployment method instead.
+
 # Configuration
 
 Please refer to the [homepage documentation website](https://gethomepage.dev/) for more information. Everything you need to know about configuring Homepage is there. Please read everything carefully before asking for help, as most questions are answered there or are simple YAML configuration issues.
